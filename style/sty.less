@@ -38,8 +38,7 @@
 
 /* FUENTES
 =========================================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* VARIABLES
 =========================================================================================== */
@@ -421,7 +420,7 @@ html, body {
 }
 
 body {
-	font-family: @barlow;
+	font-family: Inter, Helvetica, Arial, sans-serif;
 	font-size: 1.6rem;
 	line-height: 1.4;
 	font-weight: 400;
@@ -432,133 +431,13 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
 	position: relative;
-	//padding-top: 64px;
 	transition: all 0.25s ease;
-
-	&.navegando {
-		.panel-lateral {
-			top: 203px;
-		}
-		
-		header {
-			#header {
-				.menu {
-					nav {
-						> ul {
-							> li {
-								> a {
-									&:after {
-										background-color: @n;
-									}
-								}
-
-								&.mega-dropdown {
-									> .mega-dropdown-menu {
-										top: 72px;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-
-			&.transparent {
-				#header {
-					background: @b;
-
-					.logo {
-						filter: invert(0);
-					}
-
-					.menu {
-						color: @n;
-						
-						nav > ul > li.mega-dropdown > a:after {
-							color: @n;
-						}
-					}
-
-					.der {
-						.btn, .btn:not([href]) {
-							color: @n;
-							background: transparent;
-							border-color: @dark;
-			
-							&:focus {
-								color: @n;
-								background: transparent;
-							}
-			
-							&:hover, &:active {
-								color: @b;
-								background: @n;
-								border-color: @n;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	&.lateral {
-		&:after  {
-			opacity: 1;
-			visibility: visible;
-			background-color: @n50;
-		}
-
-		#buscador {
-			form, .form {
-				.franja.top:after {
-					border-color: transparent;
-				}
-
-				.boton.filtro {
-					&:before {
-						display: flex;
-					}
-				}
-			}
-		}
-	}
-
-	&.overflow {
-		overflow: hidden;
-	}
-
-	&.login {
-		padding-top: 0;
-		background-color: @n80;
-
-		header {
-			display: none;
-			visibility: hidden;
-		}
-
-		main {
-			min-height: calc(~'100dvh - 100px');
-			background-color: transparent;
-		}
-
-		footer {
-			color: @b;
-			background-color: transparent;
-		}
-	}
-
-	&.home {
-		main {
-			min-height: initial;
-		}
-	}
 }
 
 h1, h2 {
-	font-family: "Helvetica Neue", Helvetica, Inter, Arial, sans-serif;
+	font-family: Inter, Helvetica, Arial, sans-serif;
 	font-weight: 700;
-	line-height: 1.25;
+	line-height: 1.1;
 	color: @g;
 	text-rendering: optimizeLegibility;
 	display: block;
